@@ -28,14 +28,14 @@ const Blog = ({ allPosts: { edges } }) => (
                             <div className={blogStyles.listitem__thumbnail}>
                                 <figure>
                                     <img
-                                        src={node.extraPostInfo.thumbImage.mediaItemUrl}
+                                        src={node.guid}
                                         alt={node.title}
                                     />
                                 </figure>
                             </div>
                             <div className={blogStyles.listitem__content}>
                                 <h2>{node.title}</h2>
-                                <p>{node.extraPostInfo.authorExcerpt}</p>
+
                                 <Link href={`/blog/${node.slug}`}>
                                     <a>Read more</a>
                                 </Link>
